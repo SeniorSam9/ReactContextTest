@@ -1,6 +1,10 @@
 import { createContext } from "react";
 
-export const ThemeContext = createContext<{
+interface Theme {
   isDarkTheme: boolean;
   toggleDarkTheme: Function;
-}>({ isDarkTheme: false, toggleDarkTheme: () => {} });
+}
+export const ThemeContext = createContext<Theme>({
+  isDarkTheme: false,
+  toggleDarkTheme: () => {},
+});
